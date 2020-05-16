@@ -53,9 +53,16 @@ And then create a *DropWizardDemo-1.0-SNAPSHOT.jar* inside the target folder
 Now, the application is up and running and it will be accessable in the port.<br/>
 http://localhost:8080/currency-exchange/from/EUR/to/INR
 
-### Step 2: Run the Consumer Side Test 
+### Step 3: Run the Consumer Side Test
 
-and **consumer driven test**.
-As a part of running the **consumer driven test** the pact files will be generated inside the *target/mypacts* folder
+* Run the Consumer Side Test and Generate the Pact Files<br/>
+We will navigate to the [consumer-side-test Project](https://github.com/kingshuknandy2016/DropWizardAppAndPactDemo/tree/master/consumer-side-test).<br/>
+Then run the command, ***mvn clean test***<br/>
+It will run all the Consumer side test, and also generate the [pact files](https://github.com/kingshuknandy2016/DropWizardAppAndPactDemo/tree/master/pacts)
+
+* Push the Generate Pact Files into the Pact Broker<br/>
+***mvn pact:publish***
+
+
 
 
