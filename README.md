@@ -68,7 +68,17 @@ Then run the command, ***mvn clean test***<br/>
 It will run all the Consumer side test, and also generate the [pact files](https://github.com/kingshuknandy2016/DropWizardAppAndPactDemo/tree/master/pacts)
 
 * Push the Generate Pact Files into the Pact Broker<br/>
-***mvn pact:publish***
+***mvn pact:publish***<br/>
+You will be able to see the Contract Details from the Broker UI.
+
+### Step 4: Verify the Contract from the Producer Side
+
+* Run the Producer Test
+We will navigate to the [producer-side-test Project](https://github.com/kingshuknandy2016/DropWizardAppAndPactDemo/tree/master/producer-side-test).<br/>
+Then run the command, ***mvn pact:verify***<br/>
+It will verify the Customer Contract in the Producer End by taking the contract from the Broker
+
+You will be able to see the Verification Details from the Broker UI.
 
 
 
