@@ -41,12 +41,13 @@ http://localhost:8080/currency-exchange/from/EUR/to/INR
 ## Execution
 
 ### Step 1: The Application Deployment
-#### Build Application Jar File : <br/> 
-**mvn clean package**<br/>
+
+* Build Application Jar File : <br/> 
+***mvn clean package***<br/>
 This will first perform **mvn clean test** on the application which will run all **unit test**
 
-#### Start application in jetty server :<br/> 
-**java -jar target/DropWizardDemo-1.0-SNAPSHOT.jar server example.yml**
+#### Start application in jetty server(Default DropWizard Server) :<br/> 
+***java -jar target/DropWizardDemo-1.0-SNAPSHOT.jar server example.yml***
 
 
 and **consumer driven test**.
