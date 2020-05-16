@@ -40,9 +40,12 @@ http://localhost:8080/currency-exchange/from/EUR/to/INR
 
 ## Execution
 
-Step 1: Build Application Jar File : <br/> 
+### Step 1: The Application Deployment
+* Build Application Jar File : <br/> 
 **mvn clean package**<br/>
-This will first perform **mvn clean test** on the application which will run all **unit test** and **consumer driven test**.
+This will first perform **mvn clean test** on the application which will run all **unit test**
+========================
+and **consumer driven test**.
 As a part of running the **consumer driven test** the pact files will be generated inside the *target/mypacts* folder
 
 Step 2:Start application in jetty server :<br/> 
