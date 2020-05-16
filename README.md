@@ -44,11 +44,16 @@ http://localhost:8080/currency-exchange/from/EUR/to/INR
 
 * Build Application Jar File : <br/> 
 ***mvn clean package***<br/>
-This will first perform **mvn clean test** on the application which will run all **unit test**
+This will first perform **mvn clean test** on the [currency-conversion-dropwizard-demo](https://github.com/kingshuknandy2016/DropWizardAppAndPactDemo/tree/master/currency-conversion-dropwizard-demo)application which will run all **unit test**<br/>
+And then create a *DropWizardDemo-1.0-SNAPSHOT.jar* inside the target folder
 
-#### Start application in jetty server(Default DropWizard Server) :<br/> 
-***java -jar target/DropWizardDemo-1.0-SNAPSHOT.jar server example.yml***
+* Start application in jetty server(Default DropWizard Server) :<br/> 
+***java -jar target/DropWizardDemo-1.0-SNAPSHOT.jar server example.yml***<br/>
 
+Now, the application is up and running and it will be accessable in the port.<br/>
+http://localhost:8080/currency-exchange/from/EUR/to/INR
+
+### Step 2: Run the Consumer Side Test 
 
 and **consumer driven test**.
 As a part of running the **consumer driven test** the pact files will be generated inside the *target/mypacts* folder
