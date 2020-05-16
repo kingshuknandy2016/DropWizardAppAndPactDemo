@@ -6,7 +6,7 @@ Then we have included the Unit Tests related to the Application.
 It also have Consumer driven test by using [Pact](https://docs.pact.io/).
 
 ## Contents
-* Microservice 1- Application : (currency-conversion-dropwizard-demo)[https://github.com/kingshuknandy2016/DropWizardAppAndPactDemo/tree/master/currency-conversion-dropwizard-demo] which also includes the consumer driven test inside the test  folder
+* Microservice 1- Application : [currency-conversion-dropwizard-demo](https://github.com/kingshuknandy2016/DropWizardAppAndPactDemo/tree/master/currency-conversion-dropwizard-demo) which also includes the consumer driven test inside the test  folder
 
 
 ## Micoservice Details
