@@ -6,7 +6,15 @@ Then we have included the Unit Tests related to the Application.
 It also have Consumer driven test by using [Pact](https://docs.pact.io/).
 
 ## Contents
-* Microservice 1- Application : [currency-conversion-dropwizard-demo](https://github.com/kingshuknandy2016/DropWizardAppAndPactDemo/tree/master/currency-conversion-dropwizard-demo) which also includes the consumer driven test inside the test  folder
+* Microservice 1- Application : [currency-conversion-dropwizard-demo](https://github.com/kingshuknandy2016/DropWizardAppAndPactDemo/tree/master/currency-conversion-dropwizard-demo).
+
+* The [Consumer Side Test Project](https://github.com/kingshuknandy2016/DropWizardAppAndPactDemo/tree/master/consumer-side-test)
+
+* The [Producer Side Test Project](https://github.com/kingshuknandy2016/DropWizardAppAndPactDemo/tree/master/producer-side-test)
+
+* The [Pact folder](https://github.com/kingshuknandy2016/DropWizardAppAndPactDemo/tree/master/pacts) which contains the pact files generate by the [Consumer Side Test Project](https://github.com/kingshuknandy2016/DropWizardAppAndPactDemo/tree/master/consumer-side-test)
+
+* The [Docker Compose file](https://github.com/kingshuknandy2016/DropWizardAppAndPactDemo/tree/master/dockerpactbroker) to start the Pact Broker
 
 
 ## Micoservice Details
