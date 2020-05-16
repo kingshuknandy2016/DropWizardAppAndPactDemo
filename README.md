@@ -18,7 +18,7 @@ If you ask it the value of 1 USD in INR, or 1 Australian Dollar in INR, the Curr
 - 1 USD is 60 INR
 - 1 Australian Dollars is 50 INR. 
 
-http://localhost:8000/currency-exchange/from/EUR/to/INR
+http://localhost:8080/currency-exchange/from/EUR/to/INR
 
 ```json
 {
@@ -33,9 +33,10 @@ http://localhost:8000/currency-exchange/from/EUR/to/INR
 ## Execution
 
 Step 1: Build Application Jar File : <br/> 
-***mvn clean package***<br/>
+**mvn clean package**<br/>
 This will first perform **mvn clean test** on the application which will run all **unit test** and **consumer driven test**.
 As a part of running the **consumer driven test** the pact files will be generated inside the *target/mypacts* folder
 
 Step 2:Start application in jetty server :<br/> 
-java -jar target\DropWizardExample-0.0.1-SNAPSHOT.jar server
+**java -jar target/DropWizardDemo-1.0-SNAPSHOT.jar server example.yml**
+
