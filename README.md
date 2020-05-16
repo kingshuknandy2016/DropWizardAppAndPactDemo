@@ -53,6 +53,13 @@ And then create a *DropWizardDemo-1.0-SNAPSHOT.jar* inside the target folder
 Now, the application is up and running and it will be accessable in the port.<br/>
 http://localhost:8080/currency-exchange/from/EUR/to/INR
 
+### Step 2: Start a Pact Broker
+
+* Run the [docker compose file](https://github.com/kingshuknandy2016/DropWizardAppAndPactDemo/blob/master/dockerpactbroker/docker-compose.yml) <br/>
+***docker-compose up***<br/>
+
+The Broker will be up and running http://localhost:8113/
+
 ### Step 3: Run the Consumer Side Test
 
 * Run the Consumer Side Test and Generate the Pact Files<br/>
