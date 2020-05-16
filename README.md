@@ -30,3 +30,9 @@ http://localhost:8000/currency-exchange/from/EUR/to/INR
 }
 ```
 
+## Execution
+
+Step 1: Build Application Jar File :
+mvn clean package
+This will first perform **mvn clean test** on the application which will run all **unit test** and **consumer driven test**.
+As a part of running the **consumer driven test** the pact files will be generated inside the *target/mypacts* folder
