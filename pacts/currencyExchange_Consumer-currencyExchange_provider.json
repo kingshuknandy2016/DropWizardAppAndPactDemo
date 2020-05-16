@@ -1,0 +1,87 @@
+{
+    "provider": {
+        "name": "currencyExchange_provider"
+    },
+    "consumer": {
+        "name": "currencyExchange_Consumer"
+    },
+    "interactions": [
+        {
+            "description": "GET REQUEST /currency-exchange/from/{from}/to/{to}",
+            "request": {
+                "method": "GET",
+                "path": "/currency-exchange/from/USD/to/INR"
+            },
+            "response": {
+                "status": 200,
+                "headers": {
+                    "Content-Type": "application/json"
+                },
+                "body": {
+                    "from": "USD",
+                    "id": 10001,
+                    "to": "INR",
+                    "exchangeEnvironmentInfo": " ENV 1",
+                    "conversionMultiple": 65
+                },
+                "matchingRules": {
+                    "body": {
+                        "$.id": {
+                            "matchers": [
+                                {
+                                    "match": "integer"
+                                }
+                            ],
+                            "combine": "AND"
+                        },
+                        "$.from": {
+                            "matchers": [
+                                {
+                                    "match": "type"
+                                }
+                            ],
+                            "combine": "AND"
+                        },
+                        "$.to": {
+                            "matchers": [
+                                {
+                                    "match": "type"
+                                }
+                            ],
+                            "combine": "AND"
+                        },
+                        "$.conversionMultiple": {
+                            "matchers": [
+                                {
+                                    "match": "integer"
+                                }
+                            ],
+                            "combine": "AND"
+                        },
+                        "$.exchangeEnvironmentInfo": {
+                            "matchers": [
+                                {
+                                    "match": "type"
+                                }
+                            ],
+                            "combine": "AND"
+                        }
+                    }
+                }
+            },
+            "providerStates": [
+                {
+                    "name": "The value of 1 USD in INR is 65 INR"
+                }
+            ]
+        }
+    ],
+    "metadata": {
+        "pact-specification": {
+            "version": "3.0.0"
+        },
+        "pact-jvm": {
+            "version": "3.5.10"
+        }
+    }
+}

@@ -18,12 +18,6 @@
             <artifactId>dropwizard-core</artifactId>
             <version>${dropwizard.version}</version>
         </dependency>
-        <dependency>
-            <groupId>au.com.dius</groupId>
-            <artifactId>pact-jvm-consumer-junit_2.12</artifactId>
-            <version>3.5.10</version>
-            <scope>test</scope>
-        </dependency>
     </dependencies>
     <build>
         <finalName>DropWizardDemo-${version}</finalName>
