@@ -4,9 +4,10 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.dropwizard.demo</groupId>
-    <artifactId>currency-conversion-dropwizard-demo</artifactId>
+    <groupId>com.application</groupId>
+    <artifactId>currency-convertor-consumer-application</artifactId>
     <version>1.0-SNAPSHOT</version>
+
 
     <properties>
         <dropwizard.version>1.0.0</dropwizard.version>
@@ -18,24 +19,15 @@
             <artifactId>dropwizard-core</artifactId>
             <version>${dropwizard.version}</version>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/org.mockito/mockito-all -->
         <dependency>
-            <groupId>org.mockito</groupId>
-            <artifactId>mockito-all</artifactId>
-            <version>2.0.2-beta</version>
+            <groupId>au.com.dius</groupId>
+            <artifactId>pact-jvm-consumer-junit_2.12</artifactId>
+            <version>3.5.10</version>
             <scope>test</scope>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/junit/junit -->
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.13</version>
-            <scope>test</scope>
-        </dependency>
-
     </dependencies>
     <build>
-        <finalName>DropWizardDemo-${version}</finalName>
+        <finalName>currency-convertor-consumer-${version}</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -73,7 +65,7 @@
                             <transformers>
                                 <transformer implementation="org.apache.maven.plugins.shade.resource.ServicesResourceTransformer"/>
                                 <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-                                    <mainClass>com.application.CurrencyConversionApp</mainClass>
+                                    <mainClass>com.application.CurrencyConvertorApp</mainClass>
                                 </transformer>
                             </transformers>
                         </configuration>
@@ -85,8 +77,20 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <configuration>
                     <systemPropertyVariables>
-                        <pact.rootDir>target/mypacts</pact.rootDir>
+                        <pact.rootDir>../pacts</pact.rootDir>
                     </systemPropertyVariables>
+                </configuration>
+            </plugin>
+            <plugin>
+                <!-- mvn pact:publish  -->
+                <groupId>au.com.dius</groupId>
+                <artifactId>pact-jvm-provider-maven_2.11</artifactId>
+                <version>3.5.10</version>
+                <configuration>
+                    <pactDirectory>../pacts</pactDirectory> <!-- Defaults to ${project.build.directory}/pacts -->
+                    <pactBrokerUrl>http://192.168.11.1:8113</pactBrokerUrl>
+                    <projectVersion>${project.version}</projectVersion> <!-- Defaults to ${project.version} -->
+                    <trimSnapshot>true</trimSnapshot> <!-- Defaults to false -->
                 </configuration>
             </plugin>
         </plugins>

@@ -3,7 +3,7 @@
         "name": "currencyExchange_provider"
     },
     "consumer": {
-        "name": "currencyExchange_Consumer"
+        "name": "currencyExchange_Consumer_v1"
     },
     "interactions": [
         {
@@ -71,7 +71,7 @@
             },
             "providerStates": [
                 {
-                    "name": "The value of 1 USD in INR is 65 INR"
+                    "name": "Producer Test for 1 USD to 1 INR conversion"
                 }
             ]
         }
